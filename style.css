@@ -1,0 +1,63 @@
+/* Text colors */
+p,
+#header {
+  color: white;
+}
+
+/* Button colors */
+.blackBtn {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.randomBtn {
+  color: rgb(26, 2, 3);
+  font-weight: bold;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+#header,
+.sizeSelectionBox,
+.controlBtnDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.colorDiv {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.controlBtnDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#board {
+  border: solid 50px rgb(201, 63, 63);
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+  margin-top: 2em;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
