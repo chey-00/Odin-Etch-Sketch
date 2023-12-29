@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
         case btn.classList.contains("randomBtn"):
           setColor("random");
           break;
+        case btn.classList.contains("eraseBtn"):
+          setColor("darkslategray");
+          break;
       }
     });
   });
@@ -55,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
             div.style.backgroundColor = `hsl(${
               Math.random() * 300
             }, 100%, 50%)`;
+          } else if (color == "darkslategray") {
+            div.style.backgroundColor = "darkslategray";
           } else {
             console.log("ERROR");
             return "ERROR";
