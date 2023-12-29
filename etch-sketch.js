@@ -1,16 +1,16 @@
 let color = "";
 let size = "";
 
-// Add event listener to wait for page to fully load before running JS
+// Event listener to wait for page to fully load before running JS
 document.addEventListener("DOMContentLoaded", () => {
-  // add eventlistener to register user size Input into JS variable
+  // Eventlistener to register user size Input into JS variable
   let userInput = document.querySelector(".selectionInput");
 
   userInput.addEventListener("input", () => {
     size = userInput.value;
   });
 
-  // add eventlistener to color selection buttons
+  // Eventlistener for color selection buttons
 
   let buttons = document.querySelectorAll(".button");
   buttons.forEach((btn) => {
@@ -44,25 +44,28 @@ document.addEventListener("DOMContentLoaded", () => {
       message.innerHTML = "Ready to play!";
       createBoard(size);
 
+      // This function makes the user design visible in the DOM
       let numDivs = size * size;
       for (let i = 0; i < numDivs; i++) {
         let div = document.createElement("div");
-        div.addEventListener("mouseover", function colorDiv(color) {
-          if (color === "black") {
-            this.style.backgroundColor = "black";
-          } else {
-            this.style.backgroundColor = `hsl(${
+        div.addEventListener("mouseover", () => {
+          if (color == "black") {
+            div.style.backgroundColor = "black";
+          } else if (color == "random") {
+            div.style.backgroundColor = `hsl(${
               Math.random() * 300
             }, 100%, 50%)`;
+          } else {
+            console.log("ERROR");
+            return "ERROR";
           }
         });
         board.insertAdjacentElement("beforeend", div);
-        // This function makes the grid and user design visible in the DOM
       }
     }
   }
 
-  // Function to generate game board based on user size Input
+  // Function to generate game board div dimensions based on user size Input
   function createBoard(size) {
     let board = document.querySelector("#board");
     board.style.gridTemplateColumns = `repeat(${size},1fr)`;
