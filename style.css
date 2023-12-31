@@ -110,3 +110,12 @@ footer {
   position: absolute;
   top: 28%;
 }
+
+.resetBtn {
+  background-color: gray;
+  font-weight: bold;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 20%;
+  z-index: 2;
+}

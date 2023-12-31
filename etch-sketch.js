@@ -25,6 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
         case btn.classList.contains("eraseBtn"):
           setColor("darkslategray");
           break;
+        case btn.classList.contains("resetBtn"):
+          document.location.reload(true);
+          break;
       }
     });
   });
@@ -51,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let numDivs = size * size;
       for (let i = 0; i < numDivs; i++) {
         let div = document.createElement("div");
+        div.className = "paintedDivs";
         div.addEventListener("mouseover", () => {
           if (color == "black") {
             div.style.backgroundColor = "black";
