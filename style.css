@@ -49,10 +49,10 @@ p,
 }
 
 #board {
-  border: solid 50px rgb(201, 63, 63);
+  border: solid 80px rgb(201, 63, 63);
   border-radius: 10px;
   width: 500px;
-  height: 500px;
+  height: 350px;
   margin-top: 0.1em;
   display: grid;
   background-color: darkslategray;
@@ -62,7 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(blue, white);
+  background-image: linear-gradient(rebeccapurple, white);
 }
 
 .blackBtn,
@@ -74,9 +74,39 @@ body {
   background-color: green;
   padding: 0.5rem;
   font-weight: bold;
+  position: absolute;
+  top: 29%;
+  left: 38%;
 }
 .eraseBtn {
   background-color: red;
   padding: 0.5rem;
   font-weight: bold;
+  position: absolute;
+  top: 29%;
+  left: 58.5%;
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 6.5%;
+}
+
+.mainDesignDiv {
+  display: flex;
+  gap: 30rem;
+  position: absolute;
+  bottom: 19%;
+}
+.btnDesign {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  clip-path: circle(50%);
+}
+
+.message {
+  position: absolute;
+  top: 28%;
 }
